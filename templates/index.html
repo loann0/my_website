@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Loann Kenzy | Personal Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: white;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00aaff;
+        }
+
+        /* HOME */
+
+        .home {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #111, #202020);
+        }
+
+        .home h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .home h1 span {
+            color: #00aaff;
+        }
+
+        .home p {
+            font-size: 22px;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #00aaff;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #0088cc;
+        }
+
+        /* SECTIONS */
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 100px 30px;
+        }
+
+        section h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: #00aaff;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1b1b1b;
+            padding: 30px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #000;
+            color: #777;
+        }
+
+        /* PHONE */
+
+        @media (max-width: 600px) {
+            nav a {
+                margin: 5px;
+                font-size: 13px;
+            }
+
+            .home h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>.profile-picture {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 4px solid #00aaff;
+}
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- HOME -->
+
+    <div class="home" id="home">
+
+        <div>
+
+<img src="{{ url_for('static', filename='images/profile.jpg') }}"
+     alt="My Profile Picture"
+     class="profile-picture">
+  
+            <h1>Hello, I'm <span>Loann</span></h1>
+
+            <p>Welcome to my personal website</p>
+
+            <a href="#about" class="button">Discover More</a>
+        </div>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            Hello! My name is Loann Kenzy.
+            Welcome to my personal website.
+            This website contains information about me,
+            my education, my interests and my skills.
+        </p>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>📐 Mathematics</h3>
+                <p>Learning mathematics and problem solving.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚛️ Physics</h3>
+                <p>Studying physics and understanding how things work.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧪 Chemistry</h3>
+                <p>Learning chemistry and scientific concepts.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧬 Biology</h3>
+                <p>Studying biology and living organisms.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>💻 Programming</h3>
+                <p>Currently learning Python and web development.</p>
+            </div>
+
+            <div class="card">
+                <h3>🖥️ Technology</h3>
+                <p>Interested in computers, smartphones and technology.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎮 Gaming</h3>
+                <p>Interested in PC and mobile gaming.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOBBIES -->
+
+    <section id="hobbies">
+
+        <h2>My Hobbies</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🏀 Basketball</h3>
+                <p>One of my favorite sports.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎮 Gaming</h3>
+                <p>I enjoy playing different games.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎬 Movies & Series</h3>
+                <p>I enjoy watching movies and TV series.</p>
+            </div>
+
+            <div class="card">
+                <h3>📱 Technology</h3>
+                <p>I like learning about phones and computers.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+<section id="contact">
+
+    <h2>📞 Contact Me</h2>
+
+    <p>
+        Phone: <strong>0788977838</strong>
+    </p>
+
+    <p>
+        Email: <strong>kenzyshimaloann@gmail.com</strong>
+    </p>
+
+</section>
+
+    <footer>
+
+
+        <p>© 2026 Loann Kenzy | Personal Website</p>
+
+    </footer>
+
+</body>
+</html>
